@@ -1,0 +1,88 @@
+.Assignments {
+    padding: 2rem;
+    background-color: #f5f5f5;
+  
+    &Container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+    }
+  
+    &Head {
+      border-bottom: 2px solid #ddd;
+      margin-bottom: 1rem;
+  
+      h2 {
+        font-size: 2rem;
+        color: #333;
+      }
+    }
+  
+    &Content {
+      display: flex;
+      flex-direction: column;
+  
+      &Cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+  
+        &Card {
+          background-color: #e8f1f2;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          padding: 1rem;
+          text-align: center;
+  
+          h2 {
+            font-size: 1.5rem;
+            color: #005bb5;
+            margin-bottom: 0.5rem;
+          }
+  
+          p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 1rem;
+          }
+  
+          .completed {
+            display: flex;
+            justify-content: space-between;
+  
+            button {
+              background-color: #007bff;
+              border: none;
+              color: white;
+              padding: 0.5rem 1rem;
+              border-radius: 4px;
+              cursor: pointer;
+              font-size: 1rem;
+              transition: background-color 0.3s;
+  
+              &:hover {
+                background-color: #0056b3;
+              }
+            }
+          }
+  
+          .pending {
+            background-color: #ffc107;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+  
+            &:hover {
+              background-color: #d39e00;
+            }
+          }
+        }
+      }
+    }
+  }
+  

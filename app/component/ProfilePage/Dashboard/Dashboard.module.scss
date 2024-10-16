@@ -1,0 +1,86 @@
+.Dashboard {
+  background-color: #ececec;
+  .DashboardContainer {
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px;
+    .DashboardCards {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 20px 0px;
+      .DashboardCard {
+       
+        padding: 20px;
+        // border: 1px solid #ECECEC;
+        background-color: #fff;
+        border-radius: 8px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        .DashboardText {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          p {
+            color: #7d7d7d;
+            font-size: 1rem;
+          }
+          span {
+            font-size: 1.5rem;
+            font-weight: 600;
+          }
+        }
+      }
+      @media screen and (min-width:300px) {
+        .DashboardCard{
+            flex-direction: row;
+            width: 100%;
+           
+        }
+      }
+      @media screen and (min-width:600px) {
+        .DashboardCard{
+            flex-direction: row;
+            width: calc(50% - 20px);
+        }
+      }
+      @media screen and (min-width:1024px) {
+        .DashboardCard{
+            flex-direction: row;
+            width: calc(25% - 20px);
+        }
+      }
+    }
+    .Charts {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 0px;
+      .Chart {
+        width: calc(33.33% - 20px);
+        background-color: #fff;
+        height: 40vh;
+        border-radius: 8px;
+      }
+    }
+    .Tasks {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin: 20px 0px;
+      .Task1 {
+        width: calc(40% - 10px);
+      }
+      .Task2 {
+        width: calc(60% - 10px);
+      }
+      .Task1,
+      .Task2 {
+        background-color: #fff;
+        height: 40vh;
+        border-radius: 8px;
+      }
+    }
+  }
+}

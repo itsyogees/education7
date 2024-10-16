@@ -1,0 +1,179 @@
+.MyCourses {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+  
+    .MyCoursesContainer {
+      display: flex;
+    //   justify-content: center;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+  
+    .heroTabs {
+      display: flex;
+      gap: 1rem;
+  
+      .tab {
+        padding: 0.75rem 1.5rem;
+        cursor: pointer;
+        background-color: #e0e0e0;
+        border-radius: 4px;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: #ccc;
+        }
+  
+        &.active {
+          background-color: #005bb5;
+          color: #fff;
+        }
+      }
+    }
+  
+    .heroPageContent {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+  
+      .heroTabsCard {
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  
+        h2 {
+          font-size: 1.8rem;
+          margin-bottom: 1rem;
+          color: #333;
+        }
+  
+        .coursesCards {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1.5rem;
+          justify-content: space-between;
+  
+          .coursesCard {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            flex: 1 1 calc(25% - 1.5rem); /* Flex for 4 cards per row */
+  
+            &:hover {
+              transform: scale(1.05);
+            }
+  
+            .cardLink {
+              text-decoration: none;
+              color: #333;
+  
+              .cardImage {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+              }
+  
+              .sliderCard {
+                padding: 1rem;
+  
+                .stars {
+                  display: flex;
+                  gap: 0.25rem;
+                  color: #ffb400;
+                }
+  
+                .cardTitle {
+                  font-size: 1.4rem;
+                  margin: 0.5rem 0;
+                }
+              }
+  
+              .cardDoc {
+                display: flex;
+                justify-content: space-between;
+                padding: 0 1rem;
+                font-size: 0.9rem;
+                color: #777;
+  
+                p {
+                  display: flex;
+                  align-items: center;
+                  gap: 0.5rem;
+                }
+              }
+  
+              .line {
+                margin: 1rem 0;
+                height: 1px;
+                background-color: #ddd;
+              }
+  
+              .amount {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 1rem 1rem;
+  
+                p {
+                  font-size: 1.2rem;
+                  font-weight: bold;
+                }
+  
+                .amtBtn {
+                  padding: 0.5rem 1rem;
+                  background-color: #005bb5;
+                  color: #fff;
+                  border: none;
+                  border-radius: 4px;
+                  cursor: pointer;
+                  transition: background-color 0.3s ease;
+  
+                  &:hover {
+                    background-color: #003f82;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1200px) {
+    .coursesCards {
+      .coursesCard {
+        flex: 1 1 calc(33.33% - 1.5rem); /* 3 cards per row */
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .MyCourses {
+      padding: 1rem;
+  
+      .heroTabs {
+        flex-direction: column;
+        align-items: center;
+  
+        .tab {
+          width: 100%;
+          text-align: center;
+        }
+      }
+  
+      .coursesCards {
+        flex-direction: column;
+        .coursesCard {
+          flex: 1 1 100%; /* Single column layout for small screens */
+        }
+      }
+    }
+  }
+  
